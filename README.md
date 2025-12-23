@@ -1,8 +1,20 @@
-# Voice Virtual Assistant
+# 🎙️ Voice Virtual Assistant
 
 A simple voice assistant powered by ElevenLabs Conversational AI. It listens via your microphone, transcribes speech, and responds with synthesized voice.
 
-## Setup
+## 🧩 How it works (visual)
+
+```mermaid
+flowchart LR
+   U[You 🎤] -->|speak| MIC[Microphone]
+   MIC --> E[ElevenLabs Conversational AI]
+   E -->|STT| T[Transcript 📝]
+   E -->|LLM| R[Response 💬]
+   E -->|TTS| S[Audio 🔊]
+   S --> SPK[Speakers]
+```
+
+## ✅ Setup
 
 1. Create an environment file locally (do not commit secrets):
    - Copy `.env.example` to `test.env`
@@ -41,7 +53,7 @@ pip install pipwin
 pipwin install pyaudio
 ```
 
-## Run
+## ▶️ Run
 
 ```bash
 python -u voice_assistant.py
@@ -49,7 +61,7 @@ python -u voice_assistant.py
 
 Say “stop”, “exit”, “quit”, “bye”, “goodbye”, or “end session” to end the conversation.
 
-## Configuration
+## ⚙️ Configuration
 
 Non-secret text is hardcoded in `voice_assistant.py`:
 - `user_name`: default is "Robil"
@@ -58,13 +70,13 @@ Non-secret text is hardcoded in `voice_assistant.py`:
 
 You can change these lines directly if you want different behavior. Secrets (`AGENT_ID`, `API_KEY`) stay in `test.env`.
 
-## Safety & Git Hygiene
+## 🔐 Safety & Git Hygiene (if you commit)
 
 - Do not commit `test.env` or any `.env` files. They are excluded by `.gitignore`.
 - Logs like `conversation_log.txt` are ignored.
 - If a key is accidentally committed, rotate it in the ElevenLabs dashboard immediately.
 
-## ElevenLabs Agent Setup
+## 🤖 ElevenLabs Agent Setup
 
 - Create an agent in the ElevenLabs dashboard (Agents → New agent).
 - In the agent editor:
@@ -75,7 +87,7 @@ You can change these lines directly if you want different behavior. Secrets (`AG
 - Copy the Agent ID into `AGENT_ID` and the API key into `API_KEY` in your local `test.env`.
 - Ensure your account plan includes access to Conversational AI features.
 
-## Credits
+## 🙏 Credits
 
 This project was inspired by the Codédex tutorial “Create a Voice Virtual Assistant with ElevenLabs” by Alexandre Sajus:
 
@@ -83,6 +95,6 @@ This project was inspired by the Codédex tutorial “Create a Voice Virtual Ass
 
 I implemented my own version and added small improvements (logging, safer repo setup, and voice-session exit keywords).
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See `LICENSE` for details.
