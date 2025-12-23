@@ -1,0 +1,3 @@
+elevenlabs==2.27.0
+python-dotenv==1.2.1
+PyAudio==0.2.14

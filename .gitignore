@@ -1,0 +1,18 @@
+# Environment files (keep secrets out of Git)
+.env
+*.env
+test.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and local artifacts
+conversation_log.txt
+my_conversation_log.txt
+*.log
