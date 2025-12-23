@@ -1,4 +1,4 @@
-# 🎙️ Voice Virtual Assistant
+# 🎙️ Virtual Voice Assistant
 
 A simple voice assistant powered by ElevenLabs Conversational AI. It listens via your microphone, transcribes speech, and responds with synthesized voice.
 
